@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@500&family=Jost:ital@1&family=Montserrat&family=Mulish:ital,wght@1,300&family=Roboto+Slab:wght@400;500&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  font-family: 'Montserrat', sans-serif;
+
+}
+body{
+  overflow-x: hidden;
+}
+#Hero{
+  background: url(./assets/construction-site-building-house-real-estate-business-vector-illustration_333239-380.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.my-form {
+background-color: rgb(242, 242, 242);
+}
+#Hero h1{
+  margin: 0 auto;
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+.address h3{
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: 700;
+ 
+}
+.address{
+  font-size: 15px;
+  font-weight: 400;
+}
