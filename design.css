@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@500&family=Jost:ital@1&family=Montserrat&family=Mulish:ital,wght@1,300&family=Roboto+Slab:wght@400;500&display=swap');
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: 0;
   font-family: 'Montserrat', sans-serif;
 }
-body{
+body {
   overflow-x: hidden;
 }
 .banner-image {
@@ -69,13 +69,13 @@ border: 5%;
   background: #198754;
   color: #fff;	
 }
-@media (max-width: 800px){
+@media (max-width: 800px) {
 .story-area{
   overflow: visible;
   padding: 35px 0;
   }
 }
-.section-padding{
+.section-padding {
   padding: 60px 0;
 }
 .brand-carousel {
