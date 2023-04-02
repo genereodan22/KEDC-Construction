@@ -5,13 +5,9 @@
   box-sizing: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-body{
+
+body {
   overflow-x: hidden;
 }
 
-.home{
-  background:url(./assets/240_F_573594170_pYQYI3UxOPKSL6GLYEh4slHQcHGQQFDS.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 80vh;
-}
+  
