@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@500&family=Jost:ital@1&family=Montserrat&family=Mulish:ital,wght@1,300&family=Roboto+Slab:wght@400;500&display=swap');
-
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: 0;
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body{
   overflow-x: hidden;
+}
+
+.home{
+  background:url(./assets/240_F_573594170_pYQYI3UxOPKSL6GLYEh4slHQcHGQQFDS.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
 }
