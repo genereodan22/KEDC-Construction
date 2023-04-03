@@ -5,11 +5,20 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.home {
-    height: 100vh;
-    background: url(projects/header1.jpg);
+header {
+    background-image: url(projects/header1.jpg);
+    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.slogan {
+    text-align: center;
+    padding-top: 25%;
+}
+
+.slogan1 {
+    text-align: center;
+    padding-bottom: 25%;
 }
 
 .construct {
