@@ -1,21 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@500&family=Jost:ital@1&family=Montserrat&family=Mulish:ital,wght@1,300&family=Roboto+Slab:wght@400;500&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-body{
+
+body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
-.home{
-  background:url(./assets/FAQ\ banner.png);
+
+.home {
+  background: url(./assets/FAQ\ banner.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 50vh;
 }
+
 .construct {
   height: 100%;
   width: 100%;
@@ -24,11 +28,13 @@ body{
   justify-content: center;
   align-items: center;
 }
-::selection{
+
+::selection {
   background: #24932d;
   color: #fff;
 }
-.accordion{
+
+.accordion {
   display: flex;
   max-width: 1010px;
   width: 100%;
@@ -38,119 +44,144 @@ body{
   border-radius: 25px;
   padding: 45px 90px 45px 60px;
 }
-.accordion .image-box{
-  height: 360px;
-  width: 300px;
+
+.accordion .image-box {
+  height: 500px;
+  width: 500px;
 }
-.accordion .image-box img{
+
+.accordion .image-box img {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
-.accordion .accordion-text{
-  width: 60%;
+
+.accordion .accordion-text {
+  width: 100%;
 }
-.accordion .accordion-text .title{
+
+.accordion .accordion-text .title {
   font-size: 35px;
   font-weight: 600;
-  color:  #24932d;
-  font-family: 'Fira Sans', sans-serif;
+  color: #24932d;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  ;
 }
-.accordion .accordion-text .faq-text{
+
+.accordion .accordion-text .faq-text {
   margin-top: 25px;
   height: 263px;
   overflow-y: auto;
 }
-.faq-text::-webkit-scrollbar{
+
+.faq-text::-webkit-scrollbar {
   display: none;
 }
-.accordion .accordion-text li{
+
+.accordion .accordion-text li {
   list-style: none;
   cursor: pointer;
 }
-.accordion-text li .question-arrow{
+
+.accordion-text li .question-arrow {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.accordion-text li .question-arrow .question{
+
+.accordion-text li .question-arrow .question {
   font-size: 18px;
   font-weight: 500;
   color: #595959;
   transition: all 0.3s ease;
 }
-.accordion-text li .question-arrow .arrow{
+
+.accordion-text li .question-arrow .arrow {
   font-size: 20px;
   color: #595959;
   transition: all 0.3s ease;
 }
-.accordion-text li.showAnswer .question-arrow .arrow{
+
+.accordion-text li.showAnswer .question-arrow .arrow {
   transform: rotate(-180deg);
 }
+
 .accordion-text li:hover .question-arrow .question,
-.accordion-text li:hover .question-arrow .arrow{
-  color:  #24932d;
-}
-.accordion-text li.showAnswer .question-arrow .question,
-.accordion-text li.showAnswer .question-arrow .arrow{
+.accordion-text li:hover .question-arrow .arrow {
   color: #24932d;
 }
-.accordion-text li .line{
+
+.accordion-text li.showAnswer .question-arrow .question,
+.accordion-text li.showAnswer .question-arrow .arrow {
+  color: #24932d;
+}
+
+.accordion-text li .line {
   display: block;
   height: 2px;
   width: 100%;
   margin: 10px 0;
   background: rgba(0, 0, 0, 0.1);
 }
-.accordion-text li p{
+
+.accordion-text li p {
   width: 92%;
   font-size: 15px;
   font-weight: 500;
   color: #595959;
   display: none;
 }
-.accordion-text li.showAnswer p{
+
+.accordion-text li.showAnswer p {
   display: block;
 }
 
 @media (max-width: 994px) {
-  body{
+  body {
     padding: 40px 20px;
   }
-  .accordion{
+
+  .accordion {
     max-width: 100%;
     padding: 45px 60px 45px 60px;
   }
-  .accordion .image-box{
+
+  .accordion .image-box {
     height: 360px;
     width: 220px;
   }
-  .accordion .accordion-text{
+
+  .accordion .accordion-text {
     width: 63%;
   }
 }
+
 @media (max-width: 820px) {
-  .accordion{
+  .accordion {
     flex-direction: column;
   }
-  .accordion .image-box{
+
+  .accordion .image-box {
     height: 360px;
     width: 300px;
-    background: #7d2ae8;
+    background:  #24932d;
     width: 100%;
     border-radius: 25px;
     padding: 30px;
   }
-  .accordion .accordion-text{
+
+  .accordion .accordion-text {
     width: 100%;
     margin-top: 30px;
   }
 }
+
 @media (max-width: 538px) {
-  .accordion{
+  .accordion {
     padding: 25px;
   }
-  .accordion-text li p{
+
+  .accordion-text li p {
     width: 98%;
   }
 }
