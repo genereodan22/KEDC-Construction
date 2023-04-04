@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@500&family=Jost:ital@1&family=Montserrat&family=Mulish:ital,wght@1,300&family=Roboto+Slab:wght@400;500&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +8,160 @@
 }
 
 body {
+  background: url(./about/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow-x: hidden;
 }
 
-  
+/* Appointment form one  */
+.head-form {
+  background-color: rgb(26, 79, 26);
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px #282424;
+}
+
+#my_form {
+  background-color: rgb(195, 195, 181);
+  padding: 30px;
+}
+
+.Ah-input {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.A-input {
+  font-size: 20px;
+  padding-left: 30px;
+  font-weight: 500;
+}
+
+.form-select {
+  max-width: 70%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sbtn1 {
+  height: 30px;
+  width: 15%;
+  outline: none;
+  border: none;
+  color: black;
+  background-color: rgb(24, 134, 64);
+  border-radius: 50px;
+  margin: 0 auto;
+  align-items: flex-end;
+  font-weight: lighter;
+  transition: all 0.4s;
+}
+
+.sbtn1:hover {
+  opacity: 0.8;
+  color: white;
+  border: 4px solid rgb(12, 79, 37);
+}
+
+/* calendar */
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+ 
+  color: #eee;
+ 
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+  width: 100%;
+  height: 12rem;
+  background-color: #167e56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #167e56;
+}
