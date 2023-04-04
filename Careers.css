@@ -31,66 +31,66 @@ body{
     padding-top: 15%;
 }
 
-.accordion{
- 
-  width: 100%;
-  background: #FFF;
-  margin: 0 15px;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow:  0 0 4px rgba(0,0,0,0.2);
+.container{
+  width: 35%;
 }
-.accordion .accordion-content{
-  margin: 10px 0;
-  border-radius: 4px;
-  background: #FFF7F0;
-  border: 1px solid #FFD6B3;
-  overflow: hidden;
+
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
 }
-.accordion-content:nth-child(2){
-  background-color: #F0FAFF;
-  border-color: #CCEEFF;
+
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
-.accordion-content:nth-child(3){
-  background-color: #FFF0F3;
-  border-color: #FFCCD6;
+.accordion-item {
+  background-color: #fff;
+  color: #2e2c2c;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
 }
-.accordion-content:nth-child(4){
-  background-color: #F0F0FF;
-  border-color: #CCCCFF;
-}
-.accordion-content.open{
-  padding-bottom: 10px;
-}
-.accordion-content header{
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
   display: flex;
-  min-height: 50px;
-  padding: 0 15px;
-  cursor: pointer;
   align-items: center;
-  justify-content: space-between;
-  transition: all 0.2s linear;
+  position: relative;
+  cursor: pointer;
 }
-.accordion-content.open header{
-  min-height: 35px;
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
 }
-.accordion-content header .title{
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
+.accordion-item-header.active::after {
+  content: "\2212";
 }
-.accordion-content header i{
-  font-size: 15px;
-  color: #333;
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
-.accordion-content .description{
-  height: 0;
-  font-size: 12px;
-  color: #333;
-  font-weight: 400;
-  padding: 0 15px;
-  transition: all 0.2s linear;
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
 }
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 .Career-btn {
   height: 40px;
   width: 15%;
