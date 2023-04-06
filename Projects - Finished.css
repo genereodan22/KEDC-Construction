@@ -9,13 +9,11 @@ header {
     background-position: center;
     background-size: cover;
 }
-
 .slogan {
     text-align: center;
     text-shadow: 2px 2px #564e4e;
     padding-top: 25%;
 }
-
 .slogan1 {
     text-align: center;
     padding-bottom: 25%;
@@ -45,11 +43,9 @@ header {
     box-shadow: none;      
 }
 .card {
-    font-size: 1em;
     overflow: hidden;
     padding: 5;
-    border: none;
-    border-radius: .28571429rem;
+    border-radius: 2rem;
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
     margin-top:20px;
 }
@@ -65,7 +61,6 @@ header {
     height: 12px;
     background-color: #ffffff00;
 }
-
 li::marker{font-size:0;}
 
 .carousel-indicators .active {
@@ -91,7 +86,6 @@ li::marker{font-size:0;}
     margin-top: 2%;
     margin-bottom: 10%;
 }
-
 .bot:hover {
     background: #198754;
     color: #ffffff;
