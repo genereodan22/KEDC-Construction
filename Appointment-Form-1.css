@@ -14,7 +14,6 @@ body {
   overflow-x: hidden;
 }
 
-
 .head-form {
   background-color: rgb(26, 79, 26);
   border: none;
@@ -25,23 +24,6 @@ body {
 #my_form {
   background-color: rgb(195, 195, 181);
   padding: 30px;
-}
-
-.Ah-input {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.A-input {
-  font-size: 20px;
-  padding-left: 30px;
-  font-weight: 500;
-}
-
-.form-select {
-  max-width: 70%;
-  align-items: center;
-  margin: 0 auto;
 }
 
 .sbtn1 {
@@ -62,4 +44,58 @@ body {
   opacity: 0.8;
   color: white;
   border: 4px solid rgb(12, 79, 37);
+}
+label {
+  margin-left: 30px;
+}
+
+#datepicker {
+  width: 180px;
+  margin: 0 20px 20px 20px;
+  margin-left: 20px;
+
+}
+#datepicker input{
+  height: 30px;
+}
+
+#timepicker{
+  width: 180px;
+  margin: 0 20px 20px 20px;
+  margin-left: 20px;
+
+}
+
+#timepicker input{
+  height: 30px;
+
+}
+
+#datepicker>span:hover {
+  cursor: pointer;
+}
+
+.bxs-calendar {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.bx-time-five{
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.time-pickable{
+  width: 120px;
+}
+
+.time-pickable :active,
+.time-pickable :focus, input{
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
 }
