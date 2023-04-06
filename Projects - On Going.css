@@ -117,4 +117,6 @@ li::marker {
 .inquire {
     background: url(assets/background3.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
