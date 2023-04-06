@@ -14,14 +14,14 @@ body{
 }
 
 .home{
-  background:url(./assets/Career\ banner.png);
+  background:url(assets/Career\ banner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 60vh;
 }
 
 .home1{
-  background:url(assets/Careers.png );
+  background:url(assets/6486.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 80vh;

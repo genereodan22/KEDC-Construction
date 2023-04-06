@@ -9,6 +9,7 @@ header {
     background-image: url(projects/header1.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .slogan {
