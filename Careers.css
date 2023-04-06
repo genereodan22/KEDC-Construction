@@ -6,7 +6,6 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body{
-  height: 100vh;
   align-items: center;
   justify-content: center;
   background: #E3F2FD;
@@ -14,21 +13,22 @@ body{
 }
 
 .home{
-  background:url(./assets/Career\ banner.png);
+  background:url(assets/Career\ banner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 60vh;
+}
+
+.slogan {
+  text-align: center;
+  padding-top: 23%;
+  padding-bottom: 23%;
 }
 
 .home1{
-  background:url(assets/Careers.png );
+  background:url(assets/6486.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 80vh;
-}
-.slogan {
-    text-align: center;
-    padding-top: 15%;
 }
 
 .container{

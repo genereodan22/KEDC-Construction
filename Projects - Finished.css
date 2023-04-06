@@ -8,6 +8,7 @@ header {
     background-image: url(projects/header1.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .slogan {
     text-align: center;
@@ -102,4 +103,6 @@ li::marker{font-size:0;}
 .inquire {
     background: url(assets/background3.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

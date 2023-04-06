@@ -7,16 +7,24 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
+
 body{
   overflow-x: hidden;
 }
-.home {
-  height: 60vh;
-  background: url(./assets/240_F_556900533_k5XFgpTKv4Tci6RU4xv2yP7ncbuESsUt.png);
-  background-repeat: no-repeat;
+
+header {
+  background-image: url(assets/wws.jpg);
+  background-position: center;
   background-size: cover;
-  background-blend-mode: darken;
+  background-repeat: no-repeat;
 }
+
+.slogan {
+  text-align: center;
+  padding-top: 23%;
+  padding-bottom: 23%;
+}
+
 .construct {
   height: 100%;
   width: 100%;
@@ -31,6 +39,7 @@ body{
 .my-form {
 background-color: rgb(242, 242, 242);
 }
+
 #Hero h1{
   margin: 0 auto;
   font-size: 50px;
@@ -47,4 +56,13 @@ background-color: rgb(242, 242, 242);
 .address{
   font-size: 15px;
   font-weight: 400;
+}
+
+.google-maps {
+  position: relative;
+}
+
+.google-maps iframe {
+  position: relative;
+  width: 90% !important;
 }

@@ -9,11 +9,12 @@ header {
     background-image: url(about/1.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .slogan {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 23%;
 }
 
 .slogan1 {
@@ -114,4 +115,6 @@ hr.green {
 .inquire {
     background: url(assets/background3.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
