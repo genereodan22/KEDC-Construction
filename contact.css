@@ -57,3 +57,12 @@ background-color: rgb(242, 242, 242);
   font-size: 15px;
   font-weight: 400;
 }
+
+.google-maps {
+  position: relative;
+}
+
+.google-maps iframe {
+  position: relative;
+  width: 90% !important;
+}
