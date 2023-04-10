@@ -37,48 +37,51 @@
       <div class="container  py-2">
         <main>
           <section>
-            <div class="form-control px-3 p-3" id="my_form">
-              <div>
-                <h1 class="text-center">Select Time and Date </h1>
-              </div>
-
-              <div class="row">
-                <div class="container">
-
-
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label>Select Date: </label>
-                      <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
-                        <span class="input-group-addon"><i class='bx bxs-calendar'></i></span>
-                        <input class="form-control" type="text" readonly />
-
+            
+              <div class="form-control px-3 p-3"id="my_form">
+                <div>
+                  <h1 class="text-center">Select Time and Date </h1>
+                </div>
+  
+                <div class="row">
+                  <div class="container">
+  
+  
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Select Date: </label>
+                        <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+                          <span class="input-group-addon"><i class='bx bxs-calendar'></i></span>
+                          <input class="form-control" type="text" readonly />
+  
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-6">
-
-
-                      <label>Select Time:</label>
-                      <div id="timepicker" class="input-group date" data-time-format="12hrs">
-                        <span class="input-group-addon"><i class='bx bx-time-five'></i></span>
-                        <input type="text" class="time-pickable" readonly></input>
-
+                      <div class="col-md-6">
+  
+  
+                        <label>Select Time:</label>
+                        <div id="timepicker" class="input-group date" data-time-format="12hrs">
+                          <span class="input-group-addon"><i class='bx bx-time-five'></i></span>
+                          <input type="text" class="time-pickable" readonly></input>
+  
+                        </div>
                       </div>
+  
+  
                     </div>
-
-
+                  </div>
+  
+  
+  
+  
+                  <div class="form-button-container py-3">
+                    <a href="Appointment-Form .html"><input type="button" value="Back" class="sbtn1"></a>
+                    <a href="Appointment-Form-2.html"><input type="submit" value="Next" class="sbtn1"></a>
                   </div>
                 </div>
-
-
-
-
-                <div class="form-button-container py-3">
-                  <a href="Appointment-Form .html"><input type="button" value="Back" class="sbtn1"></a>
-                  <a href="Appointment-Form-2.html"><input type="submit" value="Next" class="sbtn1"></a>
-                </div>
               </div>
-            </div>
+            
+            
       </div>
 
 
@@ -279,10 +282,10 @@
       const datePickerValue = datePicker.value;
       const timppickerValue = timePicker.value;
 
-      sessionStorage.setItem('Date-Picker',JSON.stringify(datePickerValue));
-      sessionStorage.setItem('Time-Picker', JSON.stringify(timppickerValue));
+      localStorage.setItem('Date-Picker',JSON.stringify(datePickerValue));
+      localStorage.setItem('Time-Picker', JSON.stringify(timppickerValue));
 
-        window.location.href = "appointment-form.-3.html"
+        window.location.href = "Appointment-form-3.html"
     })
 
 

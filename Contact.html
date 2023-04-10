@@ -18,6 +18,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="shortcut icon" href="./assets/KEDC-Logo-removebg-preview.png" type="image/x-icon">
 </head>
 
 <body>
@@ -82,17 +83,17 @@
     <!--Header-->
     <header class="container-fluid">
       <div class="row home">
-          <div class="col-md-12 construct">
-            <div class="slogan">
-              <h1 class="text-white ">Work With us</h1>
-            </div>
-            <div>
-              <!-- <h3 class="text-white"><i>"We want to make you feel safe at your construction site"</i></h3> -->
-            </div>
+        <div class="col-md-12 construct">
+          <div class="slogan">
+            <h1 class="text-white ">Work With us</h1>
           </div>
+          <div>
+            <!-- <h3 class="text-white"><i>"We want to make you feel safe at your construction site"</i></h3> -->
+          </div>
+        </div>
       </div>
     </header>
-  <!--/End of Header-->
+    <!--/End of Header-->
     <!-- forms -->
     <section>
       <div class="row">
@@ -113,15 +114,18 @@
             </li>
           </ul>
           <div class="google-maps">
-            <iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Petplans%20Tower%20Makati%20City+(Kennedy%20Energy%20and%20Development%20Corp.)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Petplans%20Tower%20Makati%20City+(Kennedy%20Energy%20and%20Development%20Corp.)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
           </div>
         </div>
+
         <div class="col-md-6">
-          <form class="px-5 pt-5 my-form">
+          <form action="" class="px-5 pt-5 my-form" name ="Contact Us"id="contact-form" method="post">
             <div class="form-group mb-2">
               <div class="form-group mb-2">
                 <label><b>NAME:</b></label>
-                <input type="text" class="form-control" placeholder="Enter Name" required>
+                <input type="text" class="form-control" name="nAme" id="name" placeholder="Enter Name" required>
                 <div class="invalid-tooltip">
                 </div>
               </div>
@@ -129,29 +133,30 @@
             <div class="form-group mb-2">
               <div class="form-group mb-2">
                 <label><b>EMAIL:</b></label>
-                <input type="text" class="form-control" placeholder="Enter Email" required>
+                <input type="text" class="form-control"  name="eMail" id="email" placeholder="Enter Email" required>
                 <div class="invalid-tooltip">
                 </div>
               </div>
             </div>
             <div class="form-group mb-2">
               <label><b>PHONE NUMBER:</b></label>
-              <input type="text" class="form-control" placeholder="Enter Phone Number" required>
+              <input type="text" class="form-control"  name="pHone" id="phone" placeholder="Enter Phone Number" required>
               <div class="invalid-tooltip">
               </div>
             </div>
             <div class="form-group mb-2">
               <label><b>ADDRESS:</b></label>
-              <input type="text" class="form-control" placeholder="Street/City/Zip Code" required>
+              <input type="text" class="form-control" name="aDdress" id="address" placeholder="Street/City/Zip Code" required>
               <div class="invalid-tooltip">
               </div>
             </div>
             <div class="form-group mb-2">
-              <label><b>MESSAGE:</b></label>
-              <textarea type="text" class="form-control" rows="5" placeholder="Insert Message"></textarea>
+              <label><b>MESSAGE (minimum of 100 characters):</b></label>
+              <textarea type="text" class="form-control" name="mEssage"  id="message" rows="5" placeholder="Insert Message"
+                minlength="100"></textarea>
             </div>
             <div class="row py-3">
-              <button type="btn" class="btn btn-success"><b>Submit</b></button>
+              <button type="btn" class="btn btn-success" id="sendForm" onsubmit="sendMail()"><b>Submit</b></button>
             </div>
           </form>
         </div>
@@ -228,8 +233,12 @@
     </div>
   </footer>
   <!--/Footer-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-  <script>
+  <script type="text/javascript">
+    emailjs.init('baKbf-R4AFZ1542v-')
+  </script>
+  <script type="text/javascript">
     var nav = document.querySelector('nav');
 
     window.addEventListener('scroll', function () {
@@ -239,6 +248,71 @@
         nav.classList.remove('bg-success', 'shadow');
       }
     });
+
+    // form sending 
+
+    // elements from the DOM
+    const contactForm = document.getElementById("contact-form");
+    const submitBtn = document.getElementById("sendForm");
+    const nameInput = document.getElementById("name");
+    const email = document.getElementById("email");
+    const Phone = document.getElementById("phone");
+    const Address = document.getElementById("address");
+    const Message = document.getElementById("message");
+
+    // elements from email.Js
+    const publickey = "baKbf-R4AFZ1542v-";
+    const serviceId = "gmail"
+    const templateId = "template_2l1j4pc"
+    // initialize email Js  with Public 
+    emailjs.init(publickey);
+    // add submit event to the form
+    contactForm.addEventListener("submit", e => {
+      e.preventDefault();
+      // change button Text 
+      submitBtn.innerText = "Just A Moment...";
+      const inputFields = {
+        name: nameInput.value,
+        email: email.value,
+        phone: Phone.value,
+        address: Address.value,
+        message: Message.value
+      }
+      // send email
+      emailjs.send(serviceId, templateId, inputFields)
+        .then(() => {
+          submitBtn.innerText = "Message sent successfully";
+          // clear inputfields
+          nameInput.value = "";
+          email.value = "";
+          Phone.value = "";
+          Address.value = "";
+          Message.value = "";
+
+        }, (error) => {
+          // console log error 
+          console.log(error);
+          // change button text
+          submitBtn.innerText = "Somthing went wrong ";
+        })
+
+    })
+  // google sheets 
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPO9EocsvT0XRftMrkb0qp7hLXC5xreF99QhohgL7eznUTB_ONb7apizyQkRch4hiX4A/exec'
+  const form = document.forms['Contact Us']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        form.reset()
+        alert('success !')
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+
+
   </script>
 </body>
 

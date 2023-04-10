@@ -429,59 +429,89 @@
       <div class="row">
         <h4 class="text-center"> Be a part of our highly competitive team. </h4>
       </div>
-      <form action="">
-        <div class="container py-3">
+
+      <div class="container py-3">
+        <form action="#" id="applicaion-form" name="Application Form" class="needs-validation" novalidate>
           <div class="form-control py-4 px-4">
             <form class="row g-3">
 
               <div class="row pt-3">
                 <div class="col-md-6">
-                  <label for="inputFirstname" class="form-label">Firstname</label>
-                  <input type="text" class="form-control" id="inputFirstname">
+                  <label for="Firstname" class="form-label">Firstname</label>
+                  <input type="text" autocomplete="off" class="form-control" id="Firstname" name ="firstName"required>
+                </div>
+                <div class="invalid-feedback">
+                  Please enter a Firstname
                 </div>
                 <div class="col-md-6">
-                  <label for="inputLastname" class="form-label">Lastname</label>
-                  <input type="text" class="form-control" id="inputLastname">
+                  <label for="Lastname" class="form-label">Lastname</label>
+                  <input type="text"autocomplete="off" class="form-control" id="Lastname"name ="LastName" required>
+                </div>
+                <div class="invalid-feedback">
+                  Please enter a Lastname
                 </div>
               </div>
 
               <div class="row pt-3">
                 <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                  <label for="Email" class="form-label">Email</label>
+                  <input type="email" autocomplete="off"class="form-control" id="Email"name ="emaiL" required>
                 </div>
+                <div class="invalid-feedback">
+                  Please enter valid Email
+                </div>
+
                 <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="inputPassword4">
+                  <label for="Phone" class="form-label">Phone number</label>
+                  <input type="Phone" autocomplete="off" class="form-control" id="Phone"name ="phonE" required>
+                </div>
+                <div class="invalid-feedback">
+                  Please enter valid Phone number
+                </div>
+              </div>
+
+              <div class="col-12 pt-3">
+                <label for="Address" class="form-label"> Complete Address</label>
+                <input type="text" autocomplete="off" class="form-control" id="Address" placeholder="" name ="addresS"required>
+                <div class="invalid-feedback">
+                  Please enter valid Address
                 </div>
               </div>
               <div class="col-12 pt-3">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                <label for="School" class="form-label">School </label>
+                <input type="text" autocomplete="off" class="form-control" id="School" placeholder=""name ="schooL" required>
+              </div>
+              <div class="invalid-feedback">
+                Please enter School
               </div>
               <div class="col-12 pt-3">
-                <label for="inputAddress2" class="form-label">School </label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                <label for="Study" class="form-label">Field of Study </label>
+                <input type="text" autocomplete="off" class="form-control" id="Study" placeholder=""name ="Field" required>
               </div>
-              <div class="col-12 pt-3">
-                <label for="inputAddress2" class="form-label">Field of Study </label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="">
+              <div class="invalid-feedback">
+                Please enter a Field of Study
               </div>
 
               <div class="row pt-3">
                 <div class="col-md-6">
-                  <label for="inputCity" class="form-label">Course Start</label>
-                  <input type="date" class="form-control" id="inputCity">
+                  <label for="Start" class="form-label">Course Start</label>
+                  <input type="date" class="form-control" id="Start"name ="CourseStart" required>
+                </div>
+                <div class="invalid-feedback">
+                  Please enter when the Course Started
                 </div>
                 <div class="col-md-6">
-                  <label for="inputCity" class="form-label">Course End</label>
-                  <input type="date" class="form-control" id="inputCity">
+                  <label for="End" class="form-label">Course End</label>
+                  <input type="date" class="form-control" id="End"name ="CourseEnd" required>
+                </div>
+                <div class="invalid-feedback">
+                  Please enter  when the Course Ended
                 </div>
               </div>
 
               <div class="col-md-12 pt-3">
-                <label for="inputState" class="form-label">Position</label>
-                <select id="inputState" class="form-select">
+                <label for="Position" class="form-label">Position</label>
+                <select id="Position" class="form-select" name ="positioN" required>
                   <option selected> —Please choose an option— </option>
                   <option> ARCHITECT </option>
                   <option>ACCOUNTANT</option>
@@ -492,11 +522,14 @@
                   <option>MARKETING ASSISTANT</option>
                   <option>TECHNICAL SERVICES ASSISTANT</option>
                 </select>
+                <div class="invalid-feedback">
+                  Please select your desired position
+                </div>
               </div>
 
               <div class="col-md-12 pt-3">
-                <label for="inputState" class="form-label"> How did you know about us? </label>
-                <select id="inputState" class="form-select">
+                <label for="platform" class="form-label"> How did you know about us? </label>
+                <select id="platform" class="form-select" name ="platforM" required>
                   <option selected>—Please choose an option—</option>
                   <option>JobStreet</option>
                   <option>Facebook</option>
@@ -505,26 +538,33 @@
                   <option>Refferals</option>
                   <option>Others</option>
                 </select>
+                <div class="invalid-feedback">
+                  Please enter a valid platform
+                </div>
               </div>
 
               <div class="col-12 pt-3">
-                <label for="inputAddress2" class="form-label"> Website URL/LinkedIn URL </label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                <label for="URL" class="form-label"> Website URL/LinkedIn URL </label>
+                <input type="text" class="form-control" id="URL" name ="URL" placeholder="" required>
               </div>
-
+              
               <div class="mb-3 pt-3">
                 <label for="formFile" class="form-label">Attached CV </label>
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file" id="formFile" name ="FormFile" required>
               </div>
-
+              <div class="invalid-feedback">
+                Please select a cv 
+              </div>
               <div class="col-12 pt-3">
-                <button type="submit" class="Career-btn ">Submit</button>
+                <button type="submit" class="Career-btn " id="SendBtn" required>Submit</button>
               </div>
+              <span id="msg"></span>
             </form>
 
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
+
     </section>
   </main>
 
@@ -600,8 +640,8 @@
     </div>
   </footer>
   <!--/Footer-->
-
-  <script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
     // Navbar 
     var nav = document.querySelector('nav');
 
@@ -638,6 +678,111 @@
 
       });
     });
+
+    // Form Validation 
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    // form sending 
+
+    // elements from the DOM
+    const contactForm = document.getElementById("applicaion-form");
+    const submitBtn = document.getElementById("SendBtn");
+    const Firstname = document.getElementById("Firstname");
+    const Lastname = document.getElementById("Lastname");
+    const Email = document.getElementById("Email");
+    const Address = document.getElementById("Address");
+    const Phone = document.getElementById("Phone");
+    const School = document.getElementById("School");
+    const Study = document.getElementById("Study");
+    const CourseStart = document.getElementById("Start");
+    const CourseEnd = document.getElementById("End");
+    const Position = document.getElementById("Position");
+    const platform = document.getElementById("platform");
+    const URL = document.getElementById("URL");
+    const formFile = document.getElementById("formFile");
+
+    // elements from email.Js
+    const publickey = "baKbf-R4AFZ1542v-";
+    const serviceId = "gmail";
+    const templateId = "template_xtlj5xf";
+    // initialize email Js  with Public 
+    emailjs.init(publickey);
+    // add submit event to the form
+    contactForm.addEventListener("submit", e => {
+      e.preventDefault();
+      // change button Text 
+      submitBtn.innerText = "Just A Moment...";
+      const inputFields = {
+        Firstname: Firstname.value,
+        Lastname: Lastname.value,
+        phone: Phone.value,
+        address: Address.value,
+        Email: Email.value,
+        Start: CourseStart.value,
+        End: CourseEnd.value,
+        Position: Position.value,
+        platform: platform.value,
+        URL: URL.value,
+        School: School.value,
+        Study: Study.value,
+        formFile: formFile.value,
+      }
+      // send email
+      emailjs.send(serviceId, templateId, inputFields)
+        .then(() => {
+          submitBtn.innerText = "Applied sent successfully";
+          // clear inputfields
+          Firstname.value = "";
+          Lastname.value = "";
+          Phone.value = "";
+          Address.value = "";
+          Email.value = "";
+          CourseStart.value = "";
+          CourseEnd.value = "";
+          Position.value = "";
+          platform.value = "";
+          URL.value = "";
+          School.value = "";
+          Study.value = "";
+          formFile.value = ""
+        }, (error) => {
+          // console log error 
+          console.log(error);
+          // change button text
+          submitBtn.innerText = "Somthing went wrong ";
+        })
+
+    })
+
+  // google sheets 
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxoUziZhIGKgqjKRSfvKGv57K6TWBUJquzHLb8sDy5rN-a_mHRWNcHesxv5icvlf6u0/exec'
+  const form = document.forms['Application Form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        form.reset()
+        alert('success !')
+      })
+  })
 
   </script>
 

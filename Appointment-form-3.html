@@ -35,18 +35,18 @@
                 <div id="Appointment-details" class="col-sm-12 col-md-6">
                   <h4 id="Appointment-Type"></h4>
                   <p>
-                  <p id="Date-Picker"></p>
-                  <p id="Time-Picker"></p>
+                  <p id="date-picker"></p>
+                  <p id="time-picker"></p>
                   </p>
                 </div>
                 <div id="Customer-details" class="col-sm-12 col-md-6">
-                  <h4 id="'First-Name,Last-Name"></h4>
+                  <h4 id="Compelete-Name "></h4>
                   <p>
-                  <p id="Phone">Phone</p>
-                  <p id="Email">Email</p>
-                  <p id="Address">Address</p>
-                  <p id="City">City</p>
-                  <p id="Zip">Zip</p>
+                  <p id="phone">Phone</p>
+                  <p id="email">Email</p>
+                  <p id="address">Address</p>
+                  <p id="city">City</p>
+                  <p id="zip">Zip</p>
                   </p>
                   <div class=" content-row">
 
@@ -69,9 +69,24 @@
   <script>
     const firstName = JSON.parse(localStorage.getItem('First-Name')) || [];
     const lastName = JSON.parse(localStorage.getItem('Last-Name')) || [];
+    const Phone = JSON.parse(localStorage.getItem('Phone')) || [];
+    const Email = JSON.parse(localStorage.getItem('Email')) || [];
+    const Address = JSON.parse(localStorage.getItem('Address')) || [];
+    const city = JSON.parse(localStorage.getItem('City')) || [];
+    const zip = JSON.parse(localStorage.getItem('Zip')) || [];
+    const date_picker = JSON.parse(localStorage.getItem('Date-Picker')) || [];
+    const time_picker = JSON.parse(localStorage.getItem('Time-Picker')) || [];
 
-    document.getElementById('First-Name').textContent = firstName;
-    document.getElementById('Last-Name').textContent = lastName;
+
+    document.getElementById('Compelete-Name ').innerHTML = firstName + " " + lastName;
+    document.getElementById('phone').innerHTML = Phone;
+    document.getElementById('email').innerHTML = Email
+    document.getElementById('address').innerHTML = Address
+    document.getElementById('city').innerHTML = city
+    document.getElementById('zip').innerHTML = zip
+
+    document.getElementById('date-picker').innerHTML = date_picker
+    document.getElementById('time-picker').innerHTML = time_picker
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"

@@ -353,11 +353,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <form>
+          <form id="contact-form">
             <div class="form-group mb-2">
               <div class="form-group mb-2">
                 <label><b>NAME:</b></label>
-                <input type="text" class="form-control" placeholder="Enter Name" required>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
                 <div class="invalid-tooltip">
                 </div>
               </div>
@@ -365,29 +365,29 @@
             <div class="form-group mb-2">
               <div class="form-group mb-2">
                 <label><b>EMAIL:</b></label>
-                <input type="text" class="form-control" placeholder="Enter Email" required>
+                <input type="text" class="form-control" id="email" placeholder="Enter Email" required>
                 <div class="invalid-tooltip">
                 </div>
               </div>
             </div>
             <div class="form-group mb-2">
               <label><b>PHONE NUMBER:</b></label>
-              <input type="text" class="form-control" placeholder="Enter Phone Number" required>
+              <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" required>
               <div class="invalid-tooltip">
               </div>
             </div>
             <div class="form-group mb-2">
               <label><b>ADDRESS:</b></label>
-              <input type="text" class="form-control" placeholder="Street/City/Zip Code" required>
+              <input type="text" class="form-control" id="address" placeholder="Street/City/Zip Code" required>
               <div class="invalid-tooltip">
               </div>
             </div>
             <div class="form-group mb-2">
               <label><b>MESSAGE:</b></label>
-              <textarea type="text" class="form-control" rows="5" placeholder="Insert Message"></textarea>
+              <textarea type="text" class="form-control" id="message" rows=" 5" placeholder="Insert Message (min of 100 characters)" minlength="100"></textarea>
             </div>
             <div class="row py-3">
-              <button type="btn" class="btn btn-success"><b>Submit</b></button>
+              <button type="btn" class="btn btn-success" id="sendForm"><b>Submit</b></button>
             </div>
           </form>
         </div>
@@ -500,7 +500,9 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
-  <script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
     var nav = document.querySelector('nav');
 
     window.addEventListener('scroll', function () {
@@ -557,6 +559,55 @@
       }
     })
 
+     // form sending 
+
+    // elements from the DOM
+    const contactForm = document.getElementById("contact-form");
+    const submitBtn = document.getElementById("sendForm");
+    const nameInput = document.getElementById("name");
+    const email = document.getElementById("email");
+    const Phone = document.getElementById("phone");
+    const Address = document.getElementById("address");
+    const Message = document.getElementById("message");
+
+    // elements from email.Js
+    const publickey = "baKbf-R4AFZ1542v-";
+    const serviceId = "gmail"
+    const templateId = "template_qzpya5g"
+    // initialize email Js  with Public 
+    emailjs.init(publickey);
+
+    // add submit event to the form
+    contactForm.addEventListener("submit", e => {
+      e.preventDefault();
+      // change button Text 
+      submitBtn.innerText = "Just A Moment...";
+      const inputFields = {
+        name: nameInput.value,
+        email: email.value,
+        phone: Phone.value,
+        address: Address.value,
+        message: Message.value
+      }
+      // send email
+      emailjs.send(serviceId, templateId, inputFields)
+        .then(() => {
+          submitBtn.innerText = "Message sent successfully";
+          // clear inputfields
+          nameInput.value = "";
+          email.value = "";
+          Phone.value = "";
+          Address.value = "";
+          Message.value = "";
+
+        }, (error) => {
+          // console log error 
+          console.log(error);
+          // change button text
+          submitBtn.innerText = "Somthing went wrong ";
+        })
+
+    })
   </script>
 
 
