@@ -109,7 +109,7 @@
                   4. For all other inquiries, you may send an email to info@kennedy.com.ph
                 </P>
                 <a href="Appointment-Form-1.html" class="text-decoration-none"><input type="submit" value="Next"
-                    class="sbtn1"></a>
+                    class="sbtn1" id="nxtBtn"></a>
               </div>
           </section>
 
@@ -117,19 +117,27 @@
       </div>
 
       <script>
-        const form = document.getElementById('my_form')
+      // save to local storage 
+      const form = document.getElementById('my_form')
         const appointment = document.getElementById('appointment-type')
+        const nextBtn = document.getElementById('nxtBtn')
 
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
+        nextBtn.addEventListener('click', (e) => {
+          const appointmentValue = {
+            Appointment: appointment.value
+          }
 
-          const appointmentValue = appointment.value;
+          if (appointmentValue.Appointment == "Document") {
+            alert("this is document")
+            window.location.href = "Appointment-form-3.html"
+          } else if (appointmentValue.Appointment == "Contract") {
+            alert("this is Contract")
+            window.location.href = "Appointment-form-3.html"
+          }
 
-          localStorage.setItem('Appointment-Type',JSON.stringify(appointmentValue));
-        
-          window.location.href = "Appointment-form-3.html"
+          localStorage.setItem('Appointment-Type',appointmentValue.Appointment);
+
         })
-
 
       </script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
