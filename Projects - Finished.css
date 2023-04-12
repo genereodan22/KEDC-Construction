@@ -106,3 +106,7 @@ li::marker{font-size:0;}
     background-position: center;
     background-size: cover;
 }
+
+.vertical-center {
+    margin: 5%;
+}
