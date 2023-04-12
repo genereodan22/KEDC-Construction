@@ -112,3 +112,6 @@ label {
 textarea[type=text] {
   border: 3px solid #198754; 
 }
+li {
+  text-decoration: none;
+}
