@@ -93,6 +93,8 @@ li::marker{font-size:0;}
 }
 .tagline {
     padding: 5%;
+    font-family: Bahnschrift SemiBold;
+    font-size: 300%;
 }
 
 .inquire {

@@ -121,3 +121,32 @@ span{
   text-align: center;
   margin-top: 1.5rem;
 }
+.bot{
+  padding: 15px 20px;
+  background-color: #ffffff;
+  color: #198754;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-top: 2%;
+  margin-bottom: 10%;
+}
+.bot:hover{
+  background: #198754;
+  color: #ffffff;
+}
+.tagline {
+  padding: 5%;
+  font-family: Bahnschrift SemiBold;
+  font-size: 300%;
+}
+.inquire{
+  background: url(assets/background3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

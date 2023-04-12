@@ -46,8 +46,10 @@ nav a .kedc-logo {
     background: #198754;
     color: #ffffff;
 }
-.tagline{
+.tagline {
     padding: 5%;
+    font-family: Bahnschrift SemiBold;
+    font-size: 300%;
 }
 .inquire{
     background: url(assets/background3.jpg);
