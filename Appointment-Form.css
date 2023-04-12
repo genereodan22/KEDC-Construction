@@ -8,18 +8,16 @@
 }
 
 body {
-  background: url(./about/1.jpg);
+  background: url(about/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
 
-
 .head-form {
-  background-color: rgb(26, 79, 26);
   border: none;
   outline: none;
-  box-shadow: 2px 2px #282424;
+  margin-top: 10%;
 }
 
 #my_form {

@@ -8,10 +8,11 @@
 }
 
 body {
-  background: url(./about/1.jpg);
+  background: url(about/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
+  margin-top: 10%;
 }
 
 .head-form {
