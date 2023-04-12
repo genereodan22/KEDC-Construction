@@ -52,7 +52,7 @@
                         <label>Select Date: </label>
                         <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
                           <span class="input-group-addon"><i class='bx bxs-calendar'></i></span>
-                          <input class="form-control" type="text" readonly />
+                          <input class="form-control" type="text" readonly id="pickerDateInput"/>
   
                         </div>
                       </div>
@@ -62,7 +62,7 @@
                         <label>Select Time:</label>
                         <div id="timepicker" class="input-group date" data-time-format="12hrs">
                           <span class="input-group-addon"><i class='bx bx-time-five'></i></span>
-                          <input type="text" class="time-pickable" readonly></input>
+                          <input type="text" class="time-pickable" id="pickerTimeInput" readonly></input>
   
                         </div>
                       </div>
@@ -71,12 +71,12 @@
                     </div>
                   </div>
   
-  
+        
   
   
                   <div class="form-button-container py-3">
                     <a href="Appointment-Form .html"><input type="button" value="Back" class="sbtn1"></a>
-                    <a href="Appointment-Form-2.html"><input type="submit" value="Next" class="sbtn1"></a>
+                    <a href="Appointment-Form .html"><input type="submit" value="Next" class="sbtn1" id="submitSched"></a>
                   </div>
                 </div>
               </div>
@@ -171,6 +171,8 @@
       const picker = buildPicker(timePickable);
       const { bottom: top, left } = timePickable.getBoundingClientRect();
 
+
+      //console.log(picker.value)
       picker.style.top = `${top}px`;
       picker.style.left = `${left}px`;
 
@@ -271,23 +273,24 @@
 
 
     // save to local storage 
-    const form = document.getElementById('my_form')
-    const datePicker = document.getElementById('datepicker');
-    const timePicker = document.getElementById('timepicker')
+    const pickerDateInput = document.getElementById("pickerDateInput")
+    const pickerTimeInput = document.getElementById("pickerTimeInput")
+    const submitSched = document.getElementById("submitSched")
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+    submitSched.addEventListener("click", (e) => {
+      e.preventDefault()
+      console.log(pickerDateInput.value)
+      console.log(pickerTimeInput.value)
+      const schedule = {
+        time: pickerTimeInput.value,
+        date: pickerDateInput.value
+      }
       
-      const datePickerValue = datePicker.value;
-      const timppickerValue = timePicker.value;
-
-      localStorage.setItem('Date-Picker',JSON.stringify(datePickerValue));
-      localStorage.setItem('Time-Picker', JSON.stringify(timppickerValue));
-
-        window.location.href = "Appointment-form-3.html"
+      alert("Schedule has been saved!")
+      localStorage.setItem("schedule", JSON.stringify(schedule))
+      window.location.href = "Appointment-form-3.html"
     })
-
-
+  
 
   </script>
 
