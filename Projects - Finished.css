@@ -90,11 +90,6 @@ li::marker{font-size:0;}
 .bot:hover {
     background: #198754;
     color: #ffffff;
-    box-shadow: 0 0 5px #198754,
-        0 0 25px #198754,
-        0 0 50px #198754,
-        0 0 200px #198754;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 .tagline {
     padding: 5%;
