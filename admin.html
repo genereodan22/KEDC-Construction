@@ -30,15 +30,11 @@
                     </button>
                     <a class="navbar-brand" href="#">
                         <img src="admin assets/img/KEDC.png" />
-
                     </a>
-
                 </div>
-
-                <span class="logout-spn">
-                    <a href="#" style="color:#fff;">LOGOUT</a>
-
-                </span>
+                <div class="btn" style="float:right;">
+                    <button id="logoutBtn" class="logout-btn">Log Out</button>
+                </div>
             </div>
         </div>
         <!-- /. NAV TOP  -->
@@ -47,9 +43,6 @@
                 <ul class="nav" id="main-menu">
                     <li class="active-link">
                         <a href="admin.html"><i class="fa fa-desktop "></i>Dashboard </a>
-                    </li>
-                    <li>
-                        <a href="ui.html"><i class="fa fa-table "></i>UI Elements </a>
                     </li>
                     <li>
                         <a href="blank.html"><i class="fa fa-edit "></i>Blank Page </a>
@@ -418,6 +411,23 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+
+    <!-- Add additional SDKs that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"></script>
+
+    <script>
+    
+    const logoutBtn = document.querySelector(".logout-btn")
+
+        logoutBtn.addEventListener("click",()=>{
+        window.location.replace("login.html")
+    })
+    
+    </script>
 
 
 </body>
