@@ -468,10 +468,10 @@
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase">Enter Your Email</h5>
 
-          <div class="form-outline form-white mb-4 d-flex ">
-            <input type="text" id="formControlLg" class="form-control form-control-lg" />
-            <button class="btn bg-light ps-2">Submit</button>
-          </div>
+          <form name="submit-to-google-sheet" class="form-outline form-white mb-4 d-flex">
+            <input type="email" name="Email" id="formControlLg" class="form-control form-control-lg" />
+            <button class="btn bg-light ps-2" type="submit">Submit</button>
+          </form>
 
           <ul class="fa-ul">
             <li class="mb-3 list-unstyled">
@@ -504,6 +504,18 @@
   <!-- Your Chat plugin code -->
   <div id="fb-customer-chat" class="fb-customerchat">
   </div>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxxfyWeY4sIsvEbofRx4vrHDE5BahnsHtCt4FdZqgfDH6j9nDLPXuJGzzvZ5oQEuMk1Xg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
   <script>
     var chatbox = document.getElementById('fb-customer-chat');
@@ -638,6 +650,7 @@
 
     })
   </script>
+
 
 
 </body>
