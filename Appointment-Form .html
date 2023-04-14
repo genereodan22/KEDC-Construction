@@ -86,8 +86,8 @@
                 <select class="form-select col-12 select-input3" aria-label="Default select example"
                   id="appointment-type">
                   <option selected>--</option>
-                  <option value="1">Documents Submission</option>
-                  <option value="2"> Contract Signing </option>
+                  <option value="Documents Submission">Documents Submission</option>
+                  <option value="Contract Signing"> Contract Signing </option>
                 </select>
                 <P>
                   NOTES:
@@ -127,11 +127,11 @@
             Appointment: appointment.value
           }
 
-          if (appointmentValue.Appointment == "Document") {
-            alert("this is document")
+          if (appointmentValue.Appointment == "Documents Submission") {
+            alert("A document has been added ")
             window.location.href = "Appointment-form-3.html"
-          } else if (appointmentValue.Appointment == "Contract") {
-            alert("this is Contract")
+          } else if (appointmentValue.Appointment == "Contract Signing") {
+            alert("A Contract has been added  ")
             window.location.href = "Appointment-form-3.html"
           }
 

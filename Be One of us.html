@@ -431,14 +431,14 @@
       </div>
 
       <div class="container py-3">
-        <form action="#" id="applicaion-form" name="Application Form" class="needs-validation" novalidate>
+        <form action="#" id="applicaion-form" name="Application Form" class="requires-validation" novalidate>
           <div class="form-control py-4 px-4">
             <form class="row g-3">
 
               <div class="row pt-3">
                 <div class="col-md-6">
                   <label for="Firstname" class="form-label">Firstname</label>
-                  <input type="text" autocomplete="off" class="form-control" id="Firstname" name="firstName" required>
+                  <input type="text" autocomplete="off" class="form-control " id="Firstname" name="firstName" required>
                 </div>
                 <div class="invalid-feedback">
                   Please enter a Firstname
@@ -514,8 +514,9 @@
 
               <div class="col-md-12 pt-3">
                 <label for="Position" class="form-label">Position</label>
-                <select id="Position" class="form-select" name="positioN" required>
-                  <option selected> —Please choose an option— </option>
+                <select class="selectpicker form-control" id="Position" data-live-search="true" name="vender"
+                  tabindex="-1" required="required">
+                  <option disabled="disabled">--Select--</option>
                   <option> ARCHITECT </option>
                   <option>ACCOUNTANT</option>
                   <option>ADMIN ASSISTANT</option>
@@ -532,8 +533,9 @@
 
               <div class="col-md-12 pt-3">
                 <label for="platform" class="form-label"> How did you know about us? </label>
-                <select id="platform" class="form-select" name="platforM" required>
-                  <option selected>—Please choose an option—</option>
+                <select class="selectpicker form-control" id="platform" data-live-search="true" name="vender"
+                  tabindex="-1" required="required">
+                  <option disabled="disabled">--Select--</option>
                   <option>JobStreet</option>
                   <option>Facebook</option>
                   <option>LinkedIn</option>
@@ -720,7 +722,7 @@
       'use strict'
 
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
+      const forms = document.querySelectorAll('.requires-validation')
 
       // Loop over them and prevent submission
       Array.from(forms).forEach(form => {
@@ -763,28 +765,27 @@
     // add submit event to the form
     contactForm.addEventListener("submit", e => {
       e.preventDefault();
-      // change button Text 
-      submitBtn.innerText = "Just A Moment...";
-      const inputFields = {
-        Firstname: Firstname.value,
-        Lastname: Lastname.value,
-        phone: Phone.value,
-        address: Address.value,
-        Email: Email.value,
-        Start: CourseStart.value,
-        End: CourseEnd.value,
-        Position: Position.value,
-        platform: platform.value,
-        URL: URL.value,
-        School: School.value,
-        Study: Study.value,
-        formFile: formFile.value,
-      }
-
       if (contactForm.checkValidity()) {
         fetch(Emailscript, emailjs.send(serviceId, templateId, inputFields))
           .then((res) => {
             if (res.ok) {
+              // change button Text 
+              submitBtn.innerText = "Just A Moment...";
+              const inputFields = {
+                Firstname: Firstname.value,
+                Lastname: Lastname.value,
+                phone: Phone.value,
+                address: Address.value,
+                Email: Email.value,
+                Start: CourseStart.value,
+                End: CourseEnd.value,
+                Position: Position.value,
+                platform: platform.value,
+                URL: URL.value,
+                School: School.value,
+                Study: Study.value,
+                formFile: formFile.value,
+              }
               form.reset();
               submitBtn.innerText = "Applied sent successfully";
               // clear inputfields
@@ -813,7 +814,8 @@
           });
       } else {
         alert('Please fill out all required fields.');
-      }}
+      }
+    });
 
     //   // send email
     //   emailjs.send(serviceId, templateId, inputFields)

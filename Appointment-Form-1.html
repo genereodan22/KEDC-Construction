@@ -119,7 +119,7 @@
   
                   <div class="form-button-container py-3">
                     <a href="Appointment-Form .html"><input type="button" value="Back" class="sbtn1"></a>
-                    <a href="Appointment-Form .html"><input type="submit" value="Next" class="sbtn1" id="submitSched"></a>
+                    <a href="Appointment-form-3.html"><input type="submit" value="Next" class="sbtn1" id="submitSched"></a>
                   </div>
                 </div>
               </div>
@@ -330,8 +330,10 @@
       }
       
       alert("Schedule has been saved!")
-      localStorage.setItem("schedule", JSON.stringify(schedule))
-      window.location.href = "Appointment-form-3.html"
+      localStorage.setItem('Time', schedule.time);
+      localStorage.setItem('Date', schedule.date)
+      // localStorage.setItem("schedule", JSON.stringify(schedule))
+      window.location.href = "Appointment-form-2.html"
     })
   
 
