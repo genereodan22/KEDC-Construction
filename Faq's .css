@@ -70,8 +70,6 @@ body {
 
 .accordion .accordion-text .faq-text {
   margin-top: 25px;
-  height: 263px;
-  overflow-y: auto;
 }
 
 .faq-text::-webkit-scrollbar {
